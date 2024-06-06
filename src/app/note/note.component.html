@@ -1,0 +1,21 @@
+<div class="note">
+  <div class="note__date">{{noteDate}}</div>
+  <div class="note__type">
+    <img [src]="'./assets/icons/' + note().type" [alt]="note().type">
+  </div>
+  <div class="note__container">
+    <div class="note__content">
+      <div class="note__title">
+        <span class="note__title--user">You</span>
+        @if(note().type === NoteType.note) {
+        <span> added a note to </span>
+        } @else {
+        <span> had a {{note().type}} with </span>
+        }
+        <span class="note__title--user">{{note().user}}</span>
+      </div>
+      <div class="note__text" [innerHTML]="note().text"></div>
+    </div>
+    <button class="note__button" (click)="deleteNote(note().id)">Delete</button>
+  </div>
+</div>

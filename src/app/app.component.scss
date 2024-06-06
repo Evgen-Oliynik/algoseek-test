@@ -1,0 +1,51 @@
+:host {
+  display: flex;
+  justify-content: center;
+
+  .main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 720px;
+    gap: 32px;
+
+    .new-note {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 688px;
+      gap: 8px;
+      padding: 16px;
+      background: lightgray;
+      border-radius: 10px;
+
+      .new-note__text {
+        width: 100%;
+      }
+
+      .new-note__types {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .new-note__submit {
+        align-self: flex-end;
+      }
+    }
+
+    .notes-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 32px;
+      width: 100%;
+    }
+  }
+}
